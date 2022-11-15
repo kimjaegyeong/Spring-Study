@@ -9,6 +9,10 @@ public class InlineExamConsole implements ExamConsole {
 	public InlineExamConsole(Exam exam) {
 		this.exam= exam; 
 	}
+	
+	public InlineExamConsole() {
+		
+	}
 
 	@Override
 	public void print() {
