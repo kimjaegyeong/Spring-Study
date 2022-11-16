@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- p 라는 네임 스페이스가 추가되었음. -->
 	
-	<!--  Exam exam = new NewlecExam();-->
-	<bean id="exam" class="spring.di.entity.NewlecExam" >
-		<!-- NewlecExam 생성자 DI -->
-		<!--  index로 parmater의 순서를 명시한다. -->
-
-		<!--  index 를 이용하여 파라미터가 들어가는 순서를 지정하거나, name 을 이용하여 해당 파라미터의 이름을 명시해주어도 됨-->
-
-		<constructor-arg name="kor" value="10" /> <!--  kor -->
-		<constructor-arg index="1" type="int" value="20"/> <!-- eng -->
-		<constructor-arg index="3" value="30"/> <!-- com -->
-		<constructor-arg index="2" value="40"/> <!--  math -->
+	<!-- 단일 태그에 속성값을 그냥 넣는 방법: Namespaces에서 p 체크하기 -->
+	<bean id="exam" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="20"/>
+	<!--  <bean id="exam" class="spring.di.entity.NewlecExam" >
+		<constructor-arg name="kor" value="10" /> 
+		<constructor-arg index="1" type="int" value="20"/> 
+		<constructor-arg index="3" value="30"/> 
+		<constructor-arg index="2" value="40"/>
 				
-	</bean>
+	</bean> -->
+	
 	<!-- ExamConsole console = new GreedExamConsole(); -->
 	<bean id= "console" class= "spring.di.ui.InlineExamConsole" >
 		
