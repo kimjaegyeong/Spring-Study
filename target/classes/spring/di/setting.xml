@@ -7,13 +7,6 @@
 	
 	<!-- 단일 태그에 속성값을 그냥 넣는 방법: Namespaces에서 p 체크하기 -->
 	<bean id="exam" class="spring.di.entity.NewlecExam" p:kor="10" p:eng="20"/>
-	<!--  <bean id="exam" class="spring.di.entity.NewlecExam" >
-		<constructor-arg name="kor" value="10" /> 
-		<constructor-arg index="1" type="int" value="20"/> 
-		<constructor-arg index="3" value="30"/> 
-		<constructor-arg index="2" value="40"/>
-				
-	</bean> -->
 	
 	<!-- ExamConsole console = new GreedExamConsole(); -->
 	<bean id= "console" class= "spring.di.ui.InlineExamConsole" >
