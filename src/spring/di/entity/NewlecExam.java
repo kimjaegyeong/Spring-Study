@@ -6,6 +6,23 @@ public class NewlecExam implements Exam {
 	private int math;
 	private int com;
 	
+	public NewlecExam() {
+		
+	}
+	
+	//생성자 DI 
+	public NewlecExam(int kor, int eng, int math, int com) {
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+		this.com = com ; 
+	}
+	
+	@Override
+	public String toString() {
+		return "NewlecExam [kor=" + kor + ", eng=" + eng + ", math=" + math + ", com=" + com + "]";
+	}
+
 	@Override
 	public int total() {
 		// TODO Auto-generated method stub
